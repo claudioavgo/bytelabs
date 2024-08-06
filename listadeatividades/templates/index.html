@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de atividades</title>
+</head>
+<body>
+    <h1>Lista de atividades</h1>
+    <ul>
+        {% for atividade in atividades %}
+            <li>
+                {{ atividade.titulo }} - {% if atividade.finalizado %}Finalizada{% else %}Não finalizada{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
